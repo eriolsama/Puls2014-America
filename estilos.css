@@ -239,3 +239,10 @@ nav ul li a
 	float: right;
 	text-decoration: none;
 }
+
+
+@media screen and (min-width: 800px){
+	body{
+		background: red;
+	}
+}
