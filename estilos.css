@@ -50,6 +50,10 @@ a
 {
 	color: #22BCE0;
 }
+aside
+{
+	display: none;
+}
 body 
 {
 	background: #EEEEEE;
@@ -91,7 +95,7 @@ header
 }
 header figure
 {
-	float: left;
+	 float: left;
 }
 header h1
 {
@@ -105,21 +109,31 @@ header #avatar
 	position: absolute;
 	right: 0;
 	top: 0;
+
 }
 header #avatar img 
 {
 	border-radius: 50%;
 	width: 55px;
 }
-header #logo img 
+header #logo 
 {
 	border-right: 1px solid white;
-	padding-right: 0.5em;
-	margin: 0.5em 0 0 0.5em;
-	width: 52px;
+}
+header #logo img 
+{
+	width: 55px;
+	margin: 0.5em 0.5em 0 0.5em;
 	position: absolute;
+	padding-right: 0.5em;
+	width: 55px;
+	height: 55px;
 	left: 0;
 	top:0;
+	-webkit-transition:1s;
+}
+header #logo img:hover{
+	-webkit-transform: rotate(360deg);
 }
 nav
 {
@@ -149,16 +163,25 @@ nav ul #publicar_nav a
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
+nav ul #publicar_nav a:hover:before{
+	font-size: 20px;
+}
 nav ul li 
 {
 	display: inline-block;
 	margin: 0 1em 0 0;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+nav ul li a:hover{
+	background: #343B54;
 }
 nav ul li a 
 {
 	color: white;
 	display: block;
 	padding: 0.5em 0;
+	-webkit-transition:0.3s;
 }
 
 
@@ -259,6 +282,18 @@ nav ul li a
 	{
 		margin-right: 2%;
 	}
-	
+}
 
+@media screen and (min-width: 1000px){
+	aside{
+		display: block;
+		float: right;
+		width: 20%;
+		margin: 0.5em 0.5em 0.2em 1em;		
+	}
+	aside video{
+		width: 100%;
+		height: 100%;
+
+	}
 }
