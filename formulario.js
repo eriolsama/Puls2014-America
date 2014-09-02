@@ -6,18 +6,31 @@ var $form = $('#formulario'),
 	$list = $('#contenido'),
 	$post = $('.item').first();
 
-
 function mostrarFormulario(){
 	$form.slideToggle();
 	return false;
 }
 
-function agregarPost() {
+function agregarPost(){
+	var url = $url.val(),
+	 	titulo = $titulo.val(),
+		$clone = $post.clone();
+
+	$clone.find('.titulo_item a')
+		.text(titulo)
+		.attr('href', url);
+
+	$clone.hide();
+	
+	$list.prepend($clone);
+	
+	$clone.fadeIn();
+
 	return false;
-}
+} 
 
 // EVENTOS
 
 $button.click(mostrarFormulario);
-$form.submit('submit', agregarPost );
+$form.on('submit', agregarPost );
 
